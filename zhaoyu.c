@@ -60,7 +60,7 @@ PHP_FUNCTION(zhaoyu_get_all_classes)
 
 	array_init(return_value);
 
-	int num = EG(class_table)->nNumUsed;
+	int num = EG(class_table)->nNumOfElements;
 
 	for (int i = 0; i < num; i++)
 	{
@@ -76,7 +76,7 @@ PHP_FUNCTION(zhaoyu_get_all_functions)
 {
 	array_init(return_value);
 
-	int num = EG(function_table)->nNumUsed;
+	int num = EG(function_table)->nNumOfElements;
 
 	for (int i = 0; i < num; i++)
 	{
@@ -95,7 +95,7 @@ PHP_FUNCTION(zhaoyu_get_all_global_vars)
 
 
 
-	int num = EG(symbol_table).nNumUsed;
+	int num = EG(symbol_table).nNumOfElements;
 
 	for (int i = 0; i < num; i++)
 	{
